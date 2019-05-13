@@ -1019,10 +1019,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 620530A418D4443E00887D3E /* Build configuration list for PBXNativeTarget "shadowsocks_sysconf" */;
 			buildPhases = (
+				B94AC259979003EBFCBCFE8B /* [CP] Check Pods Manifest.lock */,
 				EC49C34D01835D07190AE330 /* 📦 Check Pods Manifest.lock */,
 				6205309118D4443E00887D3E /* Sources */,
 				6205309218D4443E00887D3E /* Frameworks */,
-				FE3C25CF97EFE83D5F929A24 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1037,12 +1037,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 621571CB16CF6BCB003D96B4 /* Build configuration list for PBXNativeTarget "shadowsocks" */;
 			buildPhases = (
+				0DFCD6F4E8751DE4776295A0 /* [CP] Check Pods Manifest.lock */,
 				5571A1F32E29AECFD8CFAFBA /* 📦 Check Pods Manifest.lock */,
 				621571A116CF6BCB003D96B4 /* Sources */,
 				621571A216CF6BCB003D96B4 /* Frameworks */,
 				621571A316CF6BCB003D96B4 /* Resources */,
-				463884119AB157A3168530C7 /* 📦 Embed Pods Frameworks */,
-				643AFA88CA2C89CF2F8725A8 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1059,11 +1058,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 623A7EC51795AE8000DF11DF /* Build configuration list for PBXNativeTarget "libshadowsocks" */;
 			buildPhases = (
+				23BC3B338EDB08B8DAE90848 /* [CP] Check Pods Manifest.lock */,
 				64E0A2E47A116748BEFCA30F /* 📦 Check Pods Manifest.lock */,
 				623A7EB61795AE8000DF11DF /* Sources */,
 				623A7EB71795AE8000DF11DF /* Frameworks */,
 				623A7EB81795AE8000DF11DF /* CopyFiles */,
-				E2E693ECD0B265268DD60CCA /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1078,12 +1077,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 627A6E2C18B47E9300493BBC /* Build configuration list for PBXNativeTarget "ShadowsocksX" */;
 			buildPhases = (
+				E6A75AB7E01375F96A9A3675 /* [CP] Check Pods Manifest.lock */,
 				DF477C537521BE451F44A66F /* 📦 Check Pods Manifest.lock */,
 				627A6DF318B47E9300493BBC /* Sources */,
 				627A6DF418B47E9300493BBC /* Frameworks */,
 				627A6DF518B47E9300493BBC /* Resources */,
-				17A0BC2C0C874700D91D869B /* 📦 Embed Pods Frameworks */,
-				4BE0400043826920B437022B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1104,6 +1102,12 @@
 				CLASSPREFIX = SWB;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = clowwindy;
+				TargetAttributes = {
+					621571A416CF6BCB003D96B4 = {
+						DevelopmentTeam = DXP5W898Y7;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 621571A016CF6BCA003D96B4 /* Build configuration list for PBXProject "shadowsocks" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1221,49 +1225,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		17A0BC2C0C874700D91D869B /* 📦 Embed Pods Frameworks */ = {
+		0DFCD6F4E8751DE4776295A0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-shadowsocks-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShadowsocksX/Pods-ShadowsocksX-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		463884119AB157A3168530C7 /* 📦 Embed Pods Frameworks */ = {
+		23BC3B338EDB08B8DAE90848 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-libshadowsocks-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shadowsocks/Pods-shadowsocks-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4BE0400043826920B437022B /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShadowsocksX/Pods-ShadowsocksX-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5571A1F32E29AECFD8CFAFBA /* 📦 Check Pods Manifest.lock */ = {
@@ -1281,21 +1284,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		643AFA88CA2C89CF2F8725A8 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shadowsocks/Pods-shadowsocks-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		64E0A2E47A116748BEFCA30F /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1309,6 +1297,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B94AC259979003EBFCBCFE8B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-shadowsocks_sysconf-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DF477C537521BE451F44A66F /* 📦 Check Pods Manifest.lock */ = {
@@ -1326,19 +1336,26 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E2E693ECD0B265268DD60CCA /* 📦 Copy Pods Resources */ = {
+		E6A75AB7E01375F96A9A3675 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShadowsocksX-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-libshadowsocks/Pods-libshadowsocks-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EC49C34D01835D07190AE330 /* 📦 Check Pods Manifest.lock */ = {
@@ -1354,21 +1371,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		FE3C25CF97EFE83D5F929A24 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shadowsocks_sysconf/Pods-shadowsocks_sysconf-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1691,6 +1693,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DXP5W898Y7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1708,9 +1712,11 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/OpenSSL-for-iPhone/lib\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zcc.ss;
 				PRODUCT_NAME = shadowsocks;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1723,8 +1729,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DXP5W898Y7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1742,8 +1750,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/OpenSSL-for-iPhone/lib\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zcc.ss;
 				PRODUCT_NAME = shadowsocks;
 				PROVISIONING_PROFILE = "10B86086-082B-4967-8900-EDF458793F84";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
